@@ -1,0 +1,210 @@
+{
+  "runId": "nk-ds-2026-11-06",
+  "fileKey": "v6CjUQTkM7zGlKaaZggfkh",
+  "scope": "full-library",
+  "stage": "2-base-components-done (awaiting user review)",
+  "entities": {
+    "collections": {
+      "Primitives": {
+        "id": "VariableCollectionId:9:2",
+        "modes": {
+          "Value": "9:0"
+        },
+        "vars": 96
+      },
+      "Color": {
+        "id": "VariableCollectionId:9:99",
+        "modes": {
+          "Light": "9:1"
+        },
+        "vars": 72
+      },
+      "Spacing": {
+        "id": "VariableCollectionId:9:172",
+        "modes": {
+          "Value": "9:2"
+        },
+        "vars": 12
+      },
+      "Radius": {
+        "id": "VariableCollectionId:9:185",
+        "modes": {
+          "Value": "9:3"
+        },
+        "vars": 6
+      },
+      "Size": {
+        "id": "VariableCollectionId:9:192",
+        "modes": {
+          "Value": "9:4"
+        },
+        "vars": 18
+      },
+      "Typography": {
+        "id": "VariableCollectionId:9:211",
+        "modes": {
+          "EN": "9:5",
+          "RU·KZ": "9:6"
+        },
+        "vars": 1
+      },
+      "Motion": {
+        "id": "VariableCollectionId:9:215",
+        "modes": {
+          "Value": "9:7"
+        },
+        "vars": 7
+      }
+    },
+    "variablesNote": "Stable identity = variable name within its collection (rebuild name->id map with a read-only scan).",
+    "styles": {
+      "text": 21,
+      "effect": [
+        "Elevation/Overlay-1",
+        "Elevation/Overlay-2",
+        "Elevation/Lift",
+        "Focus/Ring"
+      ],
+      "grid": [
+        "Grid/Desktop-12",
+        "Grid/Tablet-8",
+        "Grid/Mobile-4",
+        "Grid/App-content-12"
+      ],
+      "note": "Stable identity = style name."
+    },
+    "pages": {
+      "Cover": "0:1",
+      "Getting started": "11:2",
+      "Changelog": "11:3",
+      "Colors": "11:5",
+      "Typography": "11:6",
+      "Spacing & Radius": "11:7",
+      "Elevation": "11:8",
+      "Layout & Grid": "11:9",
+      "Iconography": "11:10",
+      "Motion": "11:11",
+      "Accessibility": "11:12",
+      "Buttons": "11:14",
+      "Inputs": "11:15",
+      "Selection": "11:16",
+      "Navigation": "11:17",
+      "Tabs": "11:18",
+      "Cards": "11:19",
+      "Data display": "11:20",
+      "Table": "11:21",
+      "Charts": "11:22",
+      "Feedback": "11:23",
+      "Overlays": "11:24",
+      "Learning": "11:25",
+      "App shell": "11:27",
+      "Home": "11:28",
+      "Lesson": "11:29",
+      "Progress": "11:30",
+      "Icon sources": "11:32",
+      "Playground": "11:33"
+    },
+    "docRoots": {
+      "Cover": "11:34",
+      "Typography": "12:2",
+      "Colors": "15:2",
+      "Spacing & Radius": "16:2",
+      "Elevation": "17:3",
+      "Layout & Grid": "18:2",
+      "Shell Desktop": "18:40",
+      "Shell Tablet": "18:93",
+      "Shell Mobile": "18:123",
+      "Accessibility": "19:2",
+      "Iconography": "20:2",
+      "Motion": "20:428",
+      "Getting started": "20:485",
+      "Changelog": "20:527"
+    },
+    "components": {
+      "icons": {
+        "page": "11:32",
+        "Icon/more": "44:21",
+        "Icon/placeholder": "44:36",
+        "Icon/chevron-down": "44:38",
+        "Icon/check": "44:23",
+        "Icon/search": "44:13",
+        "Icon/eye": "44:30",
+        "Icon/error": "44:26",
+        "nav": {
+          "today": "44:4",
+          "courses": "44:5",
+          "tasks": "44:7",
+          "progress": "44:8",
+          "achievements": "44:9",
+          "leaderboard": "44:10",
+          "schedule": "44:11",
+          "profile": "44:12",
+          "notifications": "44:14",
+          "logout": "44:16",
+          "help": "44:27",
+          "language": "44:33"
+        },
+        "note": "34 Icon/* components, each a single 'Vector' layer bound to color/icon/primary (placeholder: secondary). Free Lordicon System Outline + temp chevron."
+      },
+      "Button/Primary": "45:146",
+      "Button/Secondary": "45:291",
+      "Button/Dark": "45:436",
+      "Button/Ghost": "45:581",
+      "Button/Destructive": "45:726",
+      "IconButton/Primary": "45:772",
+      "IconButton/Secondary": "45:818",
+      "IconButton/Dark": "45:864",
+      "IconButton/Ghost": "45:910",
+      "TextField": "46:86",
+      "Textarea": "46:102",
+      "Search": "46:119",
+      "Select": "46:144",
+      "FormField": "46:174",
+      "Checkbox": "47:50",
+      "Radio": "47:79",
+      "Toggle": "47:112",
+      "Segmented/Item": "47:121",
+      "Segmented": "47:143",
+      "Avatar": "47:152",
+      "NavItem": "48:34",
+      "Sidebar": "48:134",
+      "AppHeader": "49:92",
+      "TabItem": "49:101",
+      "BottomTabBar": "49:102",
+      "Footer": "49:128",
+      "Tab/Underline": "49:143",
+      "Tab/Pill": "49:156",
+      "Tabs": "49:175"
+    },
+    "variables_added": {
+      "color/bg/danger-hover": "VariableID:44:2",
+      "color/bg/danger-pressed": "VariableID:44:3"
+    }
+  },
+  "completedSteps": [
+    "discovery",
+    "tokens.json+contrast(83/83)",
+    "variables(214)",
+    "styles(22 text,4 effect,4 grid)",
+    "pages(33)",
+    "foundation docs",
+    "stage1-audit-pass",
+    "typography->Onest (v0.2)",
+    "icons->components (34)",
+    "stage2: 29 sets / 250 variants, audit: 0 unbound paints"
+  ],
+  "pendingValidations": [
+    "user: stage 2 review",
+    "user: nav labels (defaults used)",
+    "user: palette/IA review"
+  ],
+  "decisions": {
+    "link/brand text": "blue/600 (blue/500 fails 4.5 on surface-sunken)",
+    "error text": "red/600=#C3342F",
+    "warning text": "saffron/700=#8E6100",
+    "focusRing": "spread shadows, white layer last; needs clipsContent",
+    "motionScopes": "API cannot set scopes on TIMING/EASING",
+    "typography": "2026-11-06: one family Onest (font/body, both modes) as free stand-in for Headspace Apercu (RU+KZ verified via cmap). Handwriting accent archived (ARCHIVED_TYPO/ARCHIVED_TEXT_STYLES in build_tokens.py; vars + Accent/Note removed from Figma, consumers -> Body/M). Tracking per Headspace md: -3% >=32, -2.5% 24, -1% 18-20, 0 <=16."
+  },
+  "docRoots_changelog_v02": "26:2"
+}

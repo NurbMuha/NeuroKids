@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeuroKids — ИИ-школа для детей и подростков</title>
+  <meta name="description" content="От первых шагов в ИИ до реальных проектов. Пробный урок: первый AI-проект за 60 минут.">
+  <meta name="theme-color" content="#F9F4F2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="../design-system/tokens.css">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<!-- icon sprite (placeholder line icons until the Lordicon set is exported) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="nk-logo" viewBox="0 0 391 104" fill="none">
+<path d="M5.112 78.4604V27.4844H16.416L38.952 59.3084V27.4844H50.688V78.4604H39.672L16.776 46.9964V78.4604H5.112ZM74.9801 79.0364C71.0441 79.0364 67.6361 78.2444 64.7561 76.6604C61.9241 75.0764 59.7401 72.8444 58.2041 69.9644C56.6681 67.0364 55.9001 63.6044 55.9001 59.6684C55.9001 55.7324 56.6921 52.2764 58.2761 49.3004C59.8601 46.3244 62.0681 43.9964 64.9001 42.3164C67.7801 40.6364 71.1641 39.7964 75.0521 39.7964C77.8841 39.7964 80.3801 40.2524 82.5401 41.1644C84.7481 42.0764 86.6201 43.3724 88.1561 45.0524C89.7401 46.7324 90.9161 48.7244 91.6841 51.0284C92.5001 53.3324 92.9081 55.8524 92.9081 58.5884C92.8601 59.3084 92.8121 60.0284 92.7641 60.7484C92.7161 61.4204 92.5961 62.1164 92.4041 62.8364H67.2041C67.3481 64.0364 67.7081 65.1404 68.2841 66.1484C68.8601 67.1564 69.6761 67.9484 70.7321 68.5244C71.7881 69.1004 73.1321 69.3884 74.7641 69.3884C75.9161 69.3884 76.9481 69.2684 77.8601 69.0284C78.8201 68.7404 79.6121 68.3564 80.2361 67.8764C80.8601 67.3484 81.2681 66.7724 81.4601 66.1484H92.6921C92.0681 69.1724 90.8681 71.6444 89.0921 73.5644C87.3161 75.4364 85.2041 76.8284 82.7561 77.7404C80.3081 78.6044 77.7161 79.0364 74.9801 79.0364ZM67.4201 55.1324H82.0361C82.0361 54.1244 81.7721 53.1404 81.2441 52.1804C80.7641 51.2204 79.9961 50.4524 78.9401 49.8764C77.8841 49.2524 76.5161 48.9404 74.8361 48.9404C73.2041 48.9404 71.8361 49.2524 70.7321 49.8764C69.6281 50.5004 68.8121 51.2924 68.2841 52.2524C67.7561 53.2124 67.4681 54.1724 67.4201 55.1324ZM114.306 79.0364C108.594 79.0364 104.178 77.5964 101.058 74.7164C97.9862 71.8364 96.4502 67.4924 96.4502 61.6844V40.5164H107.898V60.8204C107.898 62.3084 108.09 63.6524 108.474 64.8524C108.906 66.0044 109.602 66.9404 110.562 67.6604C111.522 68.3324 112.77 68.6684 114.306 68.6684C116.034 68.6684 117.33 68.2844 118.194 67.5164C119.058 66.7484 119.61 65.7644 119.85 64.5644C120.138 63.3164 120.282 62.0684 120.282 60.8204V40.5164H131.658V61.6844C131.658 67.7804 130.098 72.1964 126.978 74.9324C123.906 77.6684 119.682 79.0364 114.306 79.0364ZM136.762 78.4604V40.5164H146.842L147.634 44.5484C148.594 43.1564 149.65 42.1244 150.802 41.4524C152.002 40.7804 153.202 40.3484 154.402 40.1564C155.65 39.9164 156.85 39.7964 158.002 39.7964C158.722 39.7964 159.37 39.8204 159.946 39.8684C160.57 39.8684 160.978 39.8924 161.17 39.9404V50.8844H158.794C156.778 50.8844 154.954 51.1964 153.322 51.8204C151.738 52.4444 150.49 53.4764 149.578 54.9164C148.666 56.3564 148.21 58.3724 148.21 60.9644V78.4604H136.762ZM180.801 79.0364C177.009 79.0364 173.625 78.2684 170.649 76.7324C167.721 75.1964 165.417 72.9884 163.737 70.1084C162.057 67.1804 161.217 63.6764 161.217 59.5964C161.217 55.4204 162.057 51.8684 163.737 48.9404C165.465 45.9644 167.793 43.7084 170.721 42.1724C173.649 40.5884 176.961 39.7964 180.657 39.7964C184.401 39.7964 187.713 40.6124 190.593 42.2444C193.473 43.8284 195.753 46.1084 197.433 49.0844C199.113 52.0124 199.953 55.5644 199.953 59.7404C199.953 63.8204 199.137 67.3004 197.505 70.1804C195.921 73.0604 193.689 75.2684 190.809 76.8044C187.929 78.2924 184.593 79.0364 180.801 79.0364ZM180.585 68.4524C182.601 68.4524 184.209 68.0204 185.409 67.1564C186.609 66.2924 187.449 65.1884 187.929 63.8444C188.457 62.5004 188.721 61.1084 188.721 59.6684C188.721 58.2284 188.457 56.7884 187.929 55.3484C187.449 53.9084 186.609 52.7324 185.409 51.8204C184.257 50.8604 182.649 50.3804 180.585 50.3804C178.569 50.3804 176.961 50.8604 175.761 51.8204C174.561 52.7324 173.697 53.9084 173.169 55.3484C172.641 56.7404 172.377 58.1804 172.377 59.6684C172.377 61.1084 172.641 62.5244 173.169 63.9164C173.745 65.2604 174.609 66.3644 175.761 67.2284C176.961 68.0444 178.569 68.4524 180.585 68.4524Z" fill="currentColor"/>
+<path d="M220.185 2.15018C272.085 5.85018 324.075 -1.37982 375.955 3.52018C381.955 3.57351 385.085 6.60018 385.345 12.6002C383.215 38.9702 391.085 64.9002 388.805 91.2802C389.072 97.2735 386.205 100.237 380.205 100.17C326.295 100.46 272.435 95.1302 218.495 98.4002C212.495 98.3335 209.548 95.3002 209.655 89.3002C211.045 63.2402 206.435 37.0702 211.025 11.0702C211.132 5.07018 214.185 2.09685 220.185 2.15018Z" style="stroke:var(--nk-color-bg-brand,#0061EF)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M219.099 3.40757C269.789 6.64757 320.459 10.5776 371.329 8.57757C377.329 8.77757 380.489 11.8742 380.809 17.8676C385.359 42.7876 390.499 67.6776 384.829 93.1476C385.149 99.1342 382.309 102.111 376.309 102.078C323.019 94.9276 269.669 96.5876 216.309 101.098C210.309 101.064 207.395 98.0476 207.569 92.0476C213.109 65.5376 202.019 38.5476 209.849 12.1076C210.015 6.10757 213.099 3.20757 219.099 3.40757Z" style="stroke:var(--nk-color-bg-brand,#0061EF)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M233.113 79.5177L234.73 28.6038L246.348 28.8694L244.009 48.28L251.775 47.8212L265.236 28.1584L279.44 30.2518L260.428 52.4665L277.712 81.0896L263.032 78.9089L251.816 59.5321L243.828 59.9892L244.617 79.682L233.113 79.5177Z" style="fill:var(--nk-color-bg-brand,#0061EF)"/>
+<path d="M281.306 81.1756L281.804 42.4787L293.506 41.4994L292.925 80.4542L281.306 81.1756ZM288.964 38.7938C286.853 38.7312 284.482 38.7316 283.223 37.4457C282.013 36.1613 281.741 35.4202 281.801 33.4051C281.862 31.342 282.629 29.5017 284.011 28.2461C285.393 26.9905 287.343 26.0234 289.358 26.0832C291.277 26.1401 292.94 26.3023 294.247 27.5895C295.553 28.8768 295.888 30.2043 295.825 32.3154C295.764 34.3785 295.427 35.3547 294.095 36.5637C292.762 37.7728 291.027 38.855 288.964 38.7938Z" style="fill:var(--nk-color-bg-brand,#0061EF)"/>
+<path d="M315.063 81.0988C311.177 80.9678 307.43 78.955 304.948 77.0943C302.467 75.1856 299.629 72.2413 298.48 69.2729C297.333 66.2566 296.037 63.3402 296.156 59.7903C296.285 55.9524 296.37 53.256 297.86 50.3765C299.351 47.4491 302.304 44.4157 305.047 42.8272C307.79 41.2387 311.943 40.8799 315.877 41.0125C317.22 41.0577 318.338 41.7866 319.528 42.1149C320.765 42.4448 321.257 43.3151 322.293 43.9264C323.379 44.4913 324.122 45.4295 324.813 46.3173L326.788 30.4208L338.359 30.7139L336.685 81.9096L325.328 81.6414L325.256 77.6048C324.31 78.5815 323.861 79.2949 322.64 79.8781C321.468 80.463 320.46 80.749 319.106 81.0396C317.751 81.3301 316.598 81.1505 315.063 81.0988ZM317.432 69.8767C319.447 69.9446 320.646 70.0691 321.922 69.2476C323.2 68.3781 323.513 67.5473 324.136 66.1755C324.808 64.7574 324.45 63.7045 324.501 62.1694C324.556 60.5383 323.887 59.4738 323.31 58.0616C322.782 56.651 322.108 55.2989 320.89 54.3933C319.672 53.4878 318.513 52.4136 316.498 52.3457C314.435 52.2762 312.729 52.2877 311.449 53.2051C310.219 54.0762 309.564 54.68 308.988 56.1014C308.46 57.5244 308.444 58.5154 308.392 60.0506C308.354 61.2019 308.683 62.1205 308.934 63.2336C309.186 64.2987 310.147 65.4855 310.742 66.37C311.386 67.2082 312.597 67.9955 313.635 68.5587C314.674 69.074 315.897 69.825 317.432 69.8767Z" style="fill:var(--nk-color-bg-brand,#0061EF)"/>
+<path d="M356.685 81.2375C354.861 81.2543 353.565 80.3891 351.641 79.9748C349.765 79.56 347.666 79.0081 346.025 78.0631C344.384 77.1182 342.039 75.6762 340.919 74.0065C339.8 72.3367 339.058 70.4154 338.65 67.8751L351.008 66.5255C351.303 67.2908 351.405 68.0407 351.987 68.6114C352.615 69.1336 353.144 69.6084 354.011 69.8885C354.925 70.1201 355.509 70.5669 356.421 70.5585C357.045 70.5528 357.294 70.7701 357.869 70.6688C358.444 70.5675 359.023 70.6457 359.453 70.4017C359.931 70.1573 360.248 70.1833 360.485 69.8451C360.722 69.4589 361.066 68.8939 361.061 68.3659C361.054 67.5979 360.889 66.7703 360.358 66.4391C359.874 66.0596 359.248 65.6523 358.335 65.4687C357.469 65.2366 357.056 64.5902 355.902 64.3608C354.027 63.9941 352.651 63.5355 350.485 62.9794C348.368 62.4229 346.237 62.1896 344.74 61.2434C344.016 60.77 343.438 60.6182 342.905 60.047C342.371 59.4279 341.856 59.1641 341.514 58.4952C341.219 57.7779 341.232 57.3198 341.033 56.5536C340.882 55.739 341.265 54.5519 341.257 53.64C341.237 51.528 341.443 48.8689 342.341 47.3726C343.287 45.8758 345.007 44.121 346.487 43.1954C348.014 42.2693 349.404 41.4421 351.272 41.0409C353.14 40.5916 354.284 41.0283 356.156 41.011C358.796 40.9867 361.432 41.9592 363.696 42.8024C365.959 43.5976 368.599 45.6004 370.104 47.4586C371.657 49.2684 373.181 52.4173 373.592 55.3897L361.654 54.8576C361.501 53.899 360.833 52.3671 359.868 51.8C358.903 51.2328 358.485 50.444 357.046 50.4572C356.518 50.4621 356.24 50.386 355.714 50.5348C355.187 50.6357 354.806 50.8302 354.376 51.0261C353.993 51.1736 353.741 51.5232 353.456 51.8618C353.219 52.2 353.044 52.6365 353.048 53.1165C353.051 53.4525 352.727 53.9535 352.922 54.2878C353.165 54.6215 353.519 54.8779 353.954 55.1619C354.436 55.3975 354.878 55.8958 355.6 56.1292C357.235 56.4501 358.044 57.623 359.584 57.9449C361.122 58.2187 362.431 58.6921 363.826 58.9673C365.365 59.2892 367.047 60.2014 368.494 60.9561C369.941 61.6628 371.366 62.2136 372.29 63.5492C373.262 64.8843 373.219 66.1187 373.24 68.4226C373.262 70.8225 372.649 73.4989 371.656 75.1402C370.712 76.7809 369.351 78.4829 367.727 79.4099C366.104 80.3369 364.202 80.4625 362.286 80.9121C360.37 81.3618 358.604 81.2199 356.685 81.2375Z" style="fill:var(--nk-color-bg-brand,#0061EF)"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5" stroke-width="1.8"/><path d="m8 12.4 2.7 2.7L16.2 9.6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.8l2.8 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17l-5.7 3.1 1.2-6.3L2.9 9.4l6.3-.8z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 2 4 14h7l-1.5 8L20 10h-7z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22c-4.4 0-7-3-7-6.6 0-3.3 2.3-5.2 3.6-7.6.4 1.8 1.4 3 2.6 3.4C11 7.6 12.6 4.4 15.6 2c-.4 3 1 5.3 2.3 7.4 1 1.7 1.6 3.4 1.6 5.4C19.5 19 16.6 22 12 22z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.2 4.3 5 4.6"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9.5 4.5 2.5-4.5 2.5z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="banner">
+  <svg class="tw" viewBox="-12 -12 24 24" aria-hidden="true"><path data-spark="0 0 11" style="fill:var(--nk-neutral-800)"/></svg>
+  <span>Пробный урок — бесплатно: первый AI-проект за 60 минут.</span>
+  <a href="#signup">Записаться</a>
+</div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#" aria-label="NeuroKids — на главную"><svg class="logo-mark" viewBox="0 0 391 104" role="img" aria-hidden="true"><use href="#nk-logo"/></svg></a>
+    <nav class="nav-links" aria-label="Основное меню">
+      <a href="#features">О курсе</a>
+      <a href="#courses">Курсы</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="https://www.neurokids.kz/events">События и олимпиады</a>
+      <a href="https://www.neurokids.kz/platform/neurohub">NeuroHub</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="https://www.neurokids.kz/platform/auth/signin">Войти</a>
+      <a class="btn btn-primary" href="#signup">Пробный урок</a>
+      <button class="icon-btn nav-toggle" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Открыть меню">
+        <svg class="i-open"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-label="Меню">
+  <a href="#features">О курсе</a>
+  <a href="#courses">Курсы</a>
+  <a href="#trial">Пробный урок</a>
+  <a href="#pricing">Тарифы</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="https://www.neurokids.kz/events">События и олимпиады</a>
+  <a href="https://www.neurokids.kz/platform/auth/signin">Войти на платформу</a>
+  <a class="btn btn-primary btn-lg btn-block" href="#signup">Записаться на пробный урок</a>
+</div>
+
+<main id="main">
+
+  <!-- ============================================================ HERO -->
+  <section class="hero" data-section>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="overline nk-label-overline">ИИ-школа для детей и подростков</p>
+        <h1 class="hero-title">От первых шагов в&nbsp;ИИ&nbsp;— до <span class="hl">реальных проектов</span></h1>
+        <p class="lead">NeuroKids — платформа, где дети учатся работать с&nbsp;нейросетями и уже на первом уроке делают свой проект: постер, бота, игру или сайт.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#signup">Записаться на пробный урок</a>
+          <a class="btn btn-secondary btn-lg" href="#courses">Программа курсов</a>
+        </div>
+        <div class="proof">
+          <div><b>4.9</b><span>средний рейтинг</span></div>
+          <div><b>98%</b><span>родителей довольны</span></div>
+          <div><b>500+</b><span>проектов учеников</span></div>
+        </div>
+      </div>
+
+      <div class="plate hero-plate" data-reveal aria-hidden="true">
+        <svg class="plate-bg" viewBox="0 0 600 620" preserveAspectRatio="xMidYMid slice">
+          <circle class="ring ring-1" cx="480" cy="130" r="250" style="fill:var(--nk-orange-300)"/>
+          <circle class="ring ring-2" cx="480" cy="130" r="176" style="fill:var(--nk-saffron-300)"/>
+          <circle class="ring ring-3" cx="480" cy="130" r="108" style="fill:var(--nk-saffron-400)"/>
+          <g class="ch-line" style="stroke-width:4">
+            <path d="M448 128q8 8 16 0M496 128q8 8 16 0"/>
+            <path d="M468 152q12 10 24 0"/>
+          </g>
+          <g transform="translate(40 70) scale(1.15)"><g class="drift">
+            <path d="M30 92C14 92 6 80 10 68C4 56 14 42 28 46C30 30 48 22 60 32C70 18 94 22 96 40C112 40 118 58 110 68C118 80 108 94 94 92Z" style="fill:var(--nk-neutral-50)"/>
+          </g></g>
+          <ellipse cx="560" cy="720" rx="340" ry="230" style="fill:var(--nk-orange-500)"/>
+          <ellipse cx="60" cy="740" rx="400" ry="230" style="fill:var(--nk-red-400)"/>
+          <path class="tw" data-spark="300 70 13" style="fill:var(--nk-white)"/>
+          <path class="tw" data-spark="230 250 9" style="fill:var(--nk-saffron-200)"/>
+          <path class="tw" data-spark="560 380 12" style="fill:var(--nk-white)"/>
+          <path class="tw" data-spark="40 330 10" style="fill:var(--nk-saffron-300)"/>
+          <circle cx="350" cy="330" r="6" style="fill:var(--nk-saffron-300)"/>
+          <circle cx="150" cy="250" r="5" style="fill:var(--nk-white)"/>
+        </svg>
+        <div class="nk-orb peek h-peek" data-shape="circle" data-color="grass-500" data-eyes="closed"></div>
+        <div class="nk-char h-bit pop" data-ch="bit-laptop" data-cheer></div>
+        <div class="nk-char h-spark pop" data-ch="spark-wave" data-say="Привет!" data-cheer></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ WHAT YOU'LL MAKE -->
+  <section class="section" id="features" data-section>
+    <div class="container">
+      <div class="section-head is-center reveal">
+        <div class="cluster" data-reveal aria-hidden="true">
+          <div class="nk-orb float pop" data-shape="drop" data-color="aqua-400" data-cheer></div>
+          <div class="nk-orb float pop" data-shape="circle" data-color="orange-400" data-eyes="closed" data-cheer></div>
+          <div class="nk-orb float pop" data-shape="cloud" data-color="grass-500" data-cheer></div>
+        </div>
+        <p class="overline nk-label-overline">Что получится</p>
+        <h2 class="section-title">Нейросети — не игрушка, а инструмент. Вот что ребёнок с ними сделает</h2>
+      </div>
+
+      <ul class="chips reveal">
+        <li class="chip"><span class="nk-orb" data-shape="circle" data-color="saffron-400"></span>Картинки и постеры</li>
+        <li class="chip"><span class="nk-orb" data-shape="blob" data-color="blue-500" data-eyes="closed"></span>Сайты</li>
+        <li class="chip"><span class="nk-orb" data-shape="star" data-color="orange-400"></span>Игры</li>
+        <li class="chip"><span class="nk-orb" data-shape="cloud" data-color="aqua-400"></span>Telegram-боты</li>
+        <li class="chip"><span class="nk-orb" data-shape="drop" data-color="red-400" data-eyes="closed"></span>Видео и музыка</li>
+        <li class="chip"><span class="nk-orb" data-shape="blob" data-color="grass-500"></span>Презентации</li>
+      </ul>
+      <p class="chips-note">Направление подберём на пробном уроке: контент, код, дизайн или игры.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================ COLOR BLOCKS -->
+  <section class="section" style="padding-top:0" data-section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="overline nk-label-overline">Как устроено обучение</p>
+        <h2 class="section-title">Учёба, от которой не хочется сбегать</h2>
+      </div>
+
+      <div class="blocks">
+        <article class="block block-saffron reveal">
+          <svg class="plate-bg" viewBox="0 0 600 460" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+            <circle class="ring ring-1" cx="520" cy="470" r="260" style="fill:var(--nk-saffron-300)"/>
+            <circle class="ring ring-2" cx="520" cy="470" r="170" style="fill:var(--nk-saffron-200)"/>
+            <path class="tw" data-spark="330 330 12" style="fill:var(--nk-white)"/>
+            <path class="tw" data-spark="560 120 10" style="fill:var(--nk-blue-500)"/>
+          </svg>
+          <div class="block-copy">
+            <h3>Настоящие ИИ-инструменты</h3>
+            <p>Генерация картинок, чат-ассистент, компьютерное зрение и распознавание речи — всё внутри платформы.</p>
+            <div class="tags"><span class="tag">FLUX</span><span class="tag">Qwen</span><span class="tag">BLIP</span><span class="tag">Whisper</span></div>
+          </div>
+          <div class="nk-char pop" data-ch="pix-camera" data-cheer></div>
+        </article>
+
+        <article class="block block-orange reveal">
+          <svg class="plate-bg" viewBox="0 0 600 460" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+            <circle class="ring ring-1" cx="500" cy="500" r="250" style="fill:var(--nk-orange-300)"/>
+            <circle class="ring ring-2" cx="500" cy="500" r="160" style="fill:var(--nk-orange-200)"/>
+            <path class="tw" data-spark="320 300 11" style="fill:var(--nk-white)"/>
+            <path class="tw" data-spark="570 90 9" style="fill:var(--nk-grass-600)"/>
+          </svg>
+          <div class="block-copy">
+            <h3>Реальные проекты</h3>
+            <p>Ученики делают сайты, игры и приложения — и показывают их друзьям, а не просто смотрят видеоуроки.</p>
+          </div>
+          <div class="nk-char pop" data-ch="leaf-sign" data-cheer></div>
+        </article>
+
+        <article class="block block-blue reveal">
+          <svg class="plate-bg" viewBox="0 0 600 460" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+            <circle class="ring ring-1" cx="480" cy="500" r="260" style="fill:var(--nk-blue-600)"/>
+            <circle class="ring ring-2" cx="480" cy="500" r="170" style="fill:var(--nk-blue-400)"/>
+            <path class="tw" data-spark="300 360 12" style="fill:var(--nk-saffron-300)"/>
+            <path class="tw" data-spark="400 60 9" style="fill:var(--nk-white)"/>
+          </svg>
+          <div class="block-copy">
+            <h3>Учёба как игра</h3>
+            <p>XP, уровни, серии дней без пропусков, лидерборд и достижения — прогресс видно каждый день.</p>
+          </div>
+          <span class="xp xp-1" aria-hidden="true"><svg><use href="#i-bolt"/></svg>+50 XP</span>
+          <span class="xp xp-2" aria-hidden="true"><svg><use href="#i-flame"/></svg>7 дней</span>
+          <div class="nk-char pop" data-ch="spark-flag" data-cheer></div>
+        </article>
+
+        <article class="block block-grass reveal">
+          <svg class="plate-bg" viewBox="0 0 600 460" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+            <circle class="ring ring-1" cx="500" cy="490" r="250" style="fill:var(--nk-grass-500)"/>
+            <circle class="ring ring-2" cx="500" cy="490" r="160" style="fill:var(--nk-grass-400)"/>
+            <path class="tw" data-spark="320 320 11" style="fill:var(--nk-saffron-300)"/>
+            <path class="tw" data-spark="560 110 9" style="fill:var(--nk-white)"/>
+          </svg>
+          <div class="block-copy">
+            <h3>Наставник рядом</h3>
+            <p>Личный куратор проверяет задания и помогает, когда застрял. После каждого курса — сертификат.</p>
+          </div>
+          <div class="nk-char pop" data-ch="mira-doc" data-cheer></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ TRIAL LESSON -->
+  <section class="section" id="trial" style="padding-top:0" data-section>
+    <div class="container">
+      <div class="trial plate reveal">
+        <svg class="plate-bg" viewBox="0 0 1200 560" preserveAspectRatio="xMinYMax slice" aria-hidden="true">
+          <circle class="ring ring-1" cx="150" cy="600" r="330" style="fill:var(--nk-saffron-300)"/>
+          <circle class="ring ring-2" cx="150" cy="600" r="230" style="fill:var(--nk-saffron-200)"/>
+          <circle class="ring ring-3" cx="150" cy="600" r="130" style="fill:var(--nk-saffron-100)"/>
+          <path class="tw" data-spark="560 80 12" style="fill:var(--nk-white)"/>
+          <path class="tw" data-spark="470 470 10" style="fill:var(--nk-blue-500)"/>
+        </svg>
+        <div class="trial-copy">
+          <p class="overline nk-label-overline">Пробный урок · 60 минут · бесплатно</p>
+          <h2 class="section-title">Вместо скучной теории — первый AI-проект</h2>
+          <p class="lead">Ребёнок познакомится с наставником и создаст мини-проект уже на первом занятии.</p>
+          <a class="btn btn-dark btn-lg" href="#signup">Забронировать место <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="nk-char walker pop" data-ch="bit-walk" data-cheer></div>
+        <ol class="trial-steps">
+          <li class="step">
+            <span class="step-num" style="--num-bg:var(--nk-blue-500);--num-fg:var(--nk-white)">1</span>
+            <h3>Тест на профориентацию</h3>
+            <p>Поймём, в каком направлении AI ребёнку развиваться: контент, код, дизайн или игра.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" style="--num-bg:var(--nk-orange-400);--num-fg:var(--nk-orange-900)">2</span>
+            <h3>Первый реальный проект</h3>
+            <p>Уже на уроке создадим постер, аватар, бота или сайт — в зависимости от интересов.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" style="--num-bg:var(--nk-grass-600);--num-fg:var(--nk-white)">3</span>
+            <h3>Материалы в WhatsApp</h3>
+            <p>Чек-лист из 20+ нейросетей и гайд для родителей пришлём сразу после записи.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" style="--num-bg:var(--nk-red-400);--num-fg:var(--nk-neutral-800)">4</span>
+            <h3>Звонок куратора</h3>
+            <p>Подберём удобное время и ответим на вопросы — перезвоним за 15 минут.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ COURSES -->
+  <section class="section" id="courses" style="padding-top:0" data-section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="overline nk-label-overline">Программы обучения</p>
+        <h2 class="section-title">Курсы для развития AI-навыков</h2>
+        <p class="lead">Структурированные программы: от основ до собственных приложений.</p>
+      </div>
+
+      <div class="courses">
+        <article class="course reveal">
+          <div class="plate" style="background:var(--nk-blue-500)" aria-hidden="true">
+            <svg class="plate-bg" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+              <circle class="ring ring-1" cx="300" cy="250" r="170" style="fill:var(--nk-blue-400)"/>
+              <circle class="ring ring-2" cx="300" cy="250" r="110" style="fill:var(--nk-blue-300)"/>
+              <g transform="translate(30 30) scale(.7)"><g class="drift"><path d="M30 92C14 92 6 80 10 68C4 56 14 42 28 46C30 30 48 22 60 32C70 18 94 22 96 40C112 40 118 58 110 68C118 80 108 94 94 92Z" style="fill:var(--nk-white)"/></g></g>
+              <path class="tw" data-spark="170 60 10" style="fill:var(--nk-saffron-300)"/>
+              <path class="tw" data-spark="370 40 8" style="fill:var(--nk-white)"/>
+            </svg>
+            <div class="nk-orb float" data-shape="circle" data-color="saffron-400" data-eyes="closed" data-cheer style="right:16%;bottom:8%;width:38%"></div>
+          </div>
+          <div class="course-body">
+            <h3>Основы AI</h3>
+            <p>Базовые концепции искусственного интеллекта и машинного обучения — простым языком.</p>
+          </div>
+          <div class="course-foot">
+            <span class="duration"><svg aria-hidden="true"><use href="#i-clock"/></svg>4 недели</span>
+            <a class="link-arrow" href="#signup">Попробовать <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="course reveal">
+          <div class="plate" style="background:var(--nk-red-400)" aria-hidden="true">
+            <svg class="plate-bg" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+              <circle cx="60" cy="40" r="70" style="fill:var(--nk-red-300)"/>
+              <path class="vine" d="M-10 190C60 120 120 210 190 150S300 40 410 90" fill="none" style="stroke:var(--nk-grass-500)" stroke-width="12" stroke-linecap="round"/>
+              <ellipse cx="120" cy="150" rx="16" ry="8" transform="rotate(-35 120 150)" style="fill:var(--nk-grass-500)"/>
+              <ellipse cx="300" cy="72" rx="16" ry="8" transform="rotate(25 300 72)" style="fill:var(--nk-grass-500)"/>
+              <path class="tw" data-spark="330 160 10" style="fill:var(--nk-white)"/>
+              <path class="tw" data-spark="70 90 8" style="fill:var(--nk-saffron-300)"/>
+            </svg>
+            <div class="nk-orb float" data-shape="drop" data-color="saffron-400" data-cheer style="left:34%;bottom:6%;width:34%"></div>
+          </div>
+          <div class="course-body">
+            <h3>AI для творчества</h3>
+            <p>Искусство, музыка и контент с помощью нейросетей: от идеи до готовой работы.</p>
+          </div>
+          <div class="course-foot">
+            <span class="duration"><svg aria-hidden="true"><use href="#i-clock"/></svg>6 недель</span>
+            <a class="link-arrow" href="#signup">Попробовать <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="course reveal">
+          <div class="plate" style="background:var(--nk-grass-600)" aria-hidden="true">
+            <svg class="plate-bg" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">
+              <circle cx="200" cy="250" r="150" style="fill:var(--nk-grass-500)"/>
+              <path d="M110 80 80 112l30 32M290 80l30 32-30 32" fill="none" style="stroke:var(--nk-saffron-400)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect class="tw" x="40" y="40" width="14" height="14" rx="3" style="fill:var(--nk-aqua-300)"/>
+              <rect class="tw" x="340" y="170" width="12" height="12" rx="3" style="fill:var(--nk-white)"/>
+              <path class="tw" data-spark="350 40 9" style="fill:var(--nk-white)"/>
+            </svg>
+            <div class="nk-orb float" data-shape="cloud" data-color="neutral-50" data-eyes="closed" data-cheer style="left:31%;bottom:10%;width:38%"></div>
+          </div>
+          <div class="course-body">
+            <h3>Программирование с AI</h3>
+            <p>Современные инструменты разработки с ИИ: сайты, боты и приложения своими руками.</p>
+          </div>
+          <div class="course-foot">
+            <span class="duration"><svg aria-hidden="true"><use href="#i-clock"/></svg>8 недель</span>
+            <a class="link-arrow" href="#signup">Попробовать <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ REVIEWS -->
+  <section class="section" id="reviews" style="padding-top:0" data-section>
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="overline nk-label-overline">Родители и ученики о нас</p>
+        <h2 class="section-title">Нас выбирают семьи</h2>
+      </div>
+
+      <div class="stats" data-reveal>
+        <div class="stat pop" style="--stat-bg:var(--nk-saffron-400);--stat-fg:var(--nk-neutral-800)">
+          <span class="nk-orb float" data-shape="circle" data-color="red-400" data-cheer></span>
+          <div><b>98%</b><span>родителей довольны</span></div>
+        </div>
+        <div class="stat pop" style="--stat-bg:var(--nk-orange-400);--stat-fg:var(--nk-orange-900)">
+          <span class="nk-orb float" data-shape="star" data-color="saffron-400" data-eyes="closed" data-cheer></span>
+          <div><b>4.9</b><span>средний рейтинг</span></div>
+        </div>
+        <div class="stat pop" style="--stat-bg:var(--nk-blue-500);--stat-fg:var(--nk-white)">
+          <span class="nk-orb float" data-shape="blob" data-color="saffron-400" data-cheer></span>
+          <div><b>500+</b><span>выполненных проектов</span></div>
+        </div>
+      </div>
+
+      <div class="reviews">
+        <figure class="review reveal">
+          <div class="stars" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Ребёнок за 2 месяца научился делать презентации, видео и даже музыку. Теперь помогает мне с работой!</blockquote>
+          <figcaption><span class="avatar" style="--av-bg:var(--nk-saffron-400);--av-fg:var(--nk-neutral-800)">АК</span><cite><b>Анна К.</b><span>мама Артёма, 14 лет</span></cite></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Сыну 11 лет, он сначала играл в игры, а теперь создаёт их сам. Платформа реально увлекает.</blockquote>
+          <figcaption><span class="avatar" style="--av-bg:var(--nk-blue-500);--av-fg:var(--nk-white)">ДМ</span><cite><b>Дмитрий М.</b><span>папа Максима, 11 лет</span></cite></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Дочь сделала сайт для школьного проекта через Lovable. Учителя были в восторге.</blockquote>
+          <figcaption><span class="avatar" style="--av-bg:var(--nk-grass-600);--av-fg:var(--nk-white)">ЕР</span><cite><b>Елена Р.</b><span>мама Софии, 12 лет</span></cite></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Дочь 13 лет теперь сама делает обложки для своих stories. Говорит, что это её новый суперпауэр.</blockquote>
+          <figcaption><span class="avatar" style="--av-bg:var(--nk-orange-400);--av-fg:var(--nk-orange-900)">МП</span><cite><b>Марина П.</b><span>мама Ксении, 13 лет</span></cite></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Сын ушёл в AI-разработку так глубоко, что теперь помогает мне с маркетингом. ROI на обучение огромный.</blockquote>
+          <figcaption><span class="avatar" style="--av-bg:var(--nk-aqua-400);--av-fg:var(--nk-neutral-800)">СВ</span><cite><b>Сергей В.</b><span>папа Ильи, 15 лет</span></cite></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" aria-label="Оценка 5 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote>Ребёнок раньше боялся компьютера, а теперь создаёт Telegram-ботов. Это настоящая трансформация.</blockquote>
+          <figcaption><span class="avatar" style="--av-bg:var(--nk-red-400);--av-fg:var(--nk-neutral-800)">ОТ</span><cite><b>Ольга Т.</b><span>мама Миши, 10 лет</span></cite></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ PRICING -->
+  <section class="section" id="pricing" style="padding-top:0" data-section>
+    <div class="container">
+      <div class="section-head is-center reveal">
+        <p class="overline nk-label-overline">Тарифы</p>
+        <h2 class="section-title">Выберите свой темп</h2>
+        <p class="lead">Начните с бесплатного пробного урока — тариф подберём вместе с куратором.</p>
+      </div>
+
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Старт</h3>
+          <p class="price"><b>9 900 ₸</b><span>/ мес</span></p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>5 генераций в день</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Базовые миссии</li>
+          </ul>
+          <a class="btn btn-secondary btn-block" href="#signup">Начать с пробного урока</a>
+        </article>
+        <article class="plan plan-pro reveal">
+          <span class="nk-orb float" data-shape="circle" data-color="orange-400" data-eyes="closed" aria-hidden="true"></span>
+          <h3>Про</h3>
+          <p class="price"><b>19 900 ₸</b><span>/ мес</span></p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Безлимитная генерация</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Premium-модели</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Наставник</li>
+          </ul>
+          <a class="btn btn-dark btn-block" href="#signup">Начать с пробного урока</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Макс</h3>
+          <p class="price"><b>34 900 ₸</b><span>/ мес</span></p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Занятия 1-на-1 с куратором</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Подготовка к олимпиадам</li>
+          </ul>
+          <a class="btn btn-secondary btn-block" href="#signup">Начать с пробного урока</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ SIGNUP BAND -->
+  <section class="section" id="signup" style="padding-top:0" data-section>
+    <div class="container signup-wrap">
+      <div class="nk-char peeker" data-ch="spark-wave" data-cheer></div>
+      <div class="signup reveal" id="signup-band">
+        <svg class="plate-bg" viewBox="0 0 1200 520" preserveAspectRatio="xMinYMax slice" aria-hidden="true">
+          <circle class="ring ring-1" cx="80" cy="560" r="300" style="fill:var(--nk-blue-600)"/>
+          <circle class="ring ring-2" cx="80" cy="560" r="200" style="fill:var(--nk-blue-400)"/>
+          <path class="tw" data-spark="480 440 12" style="fill:var(--nk-saffron-400)"/>
+          <path class="tw" data-spark="560 60 9" style="fill:var(--nk-white)"/>
+        </svg>
+        <div class="signup-copy">
+          <h2 class="section-title">Запишите ребёнка на пробный урок</h2>
+          <p class="lead">Заполните форму — куратор свяжется с вами за 15 минут.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>60 минут с наставником</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Первый проект на уроке</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Чек-лист из 20+ нейросетей в WhatsApp</li>
+          </ul>
+        </div>
+
+        <form class="form" id="signup-form" novalidate>
+          <div class="field">
+            <label for="f-name">Как вас зовут?</label>
+            <input class="input" id="f-name" name="name" autocomplete="name" placeholder="Имя" required>
+          </div>
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required>
+          </div>
+          <div class="field">
+            <label for="f-city">Город</label>
+            <select class="input" id="f-city" name="city" required>
+              <option value="" selected disabled>Выберите город</option>
+              <option>Алматы</option><option>Астана</option><option>Шымкент</option><option>Другой город</option><option>Онлайн</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-time">Когда удобно?</label>
+            <select class="input" id="f-time" name="time" required>
+              <option value="" selected disabled>Выберите время</option>
+              <option>Как можно скорее</option><option>Будни 11–14</option><option>Будни 15–18</option><option>Вечер 18–19</option><option>Выходные</option>
+            </select>
+          </div>
+          <p class="field-error" id="form-error" role="alert"></p>
+          <button class="btn btn-secondary btn-lg" type="submit">Забронировать место</button>
+          <p class="consent">Нажимая кнопку, вы соглашаетесь с <a href="https://www.neurokids.kz/privacy">политикой конфиденциальности</a>.</p>
+        </form>
+
+        <div class="thanks" id="thanks" tabindex="-1">
+          <h3>Готово, место за вами!</h3>
+          <p>Куратор перезвонит в течение 15 минут, а чек-лист нейросетей придёт в WhatsApp.</p>
+          <p class="nk-caption-default">Прототип: заявка никуда не отправляется.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ FOOTER -->
+<footer data-section>
+  <div class="container">
+    <p class="parade-title reveal">До встречи на уроке!</p>
+    <div class="parade" data-reveal aria-hidden="true">
+      <div class="nk-char pop" data-ch="leaf-thumb" data-cheer></div>
+      <div class="nk-char pop" data-ch="pix-camera" data-cheer></div>
+      <div class="nk-char pop" data-ch="spark-flag" data-cheer></div>
+      <div class="nk-char pop" data-ch="aqua-mega" data-cheer></div>
+      <div class="nk-char pop" data-ch="bit-walk" data-cheer></div>
+    </div>
+  </div>
+  <div class="container footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="logo" href="#" aria-label="NeuroKids — на главную"><svg class="logo-mark" viewBox="0 0 391 104" role="img" aria-hidden="true"><use href="#nk-logo"/></svg></a>
+        <p>От первых шагов в ИИ до реальных проектов и новых возможностей.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/neurokids__kz" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+          <a href="https://www.tiktok.com/@neurokids.kz" aria-label="TikTok"><svg><use href="#i-tiktok"/></svg></a>
+          <a href="http://www.youtube.com/@Neuro_kidskz" aria-label="YouTube"><svg><use href="#i-youtube"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Обучение</h4>
+        <ul>
+          <li><a href="#features">О курсе</a></li>
+          <li><a href="#courses">Курсы</a></li>
+          <li><a href="#trial">Пробный урок</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Сообщество</h4>
+        <ul>
+          <li><a href="https://www.neurokids.kz/#works">Работы учеников</a></li>
+          <li><a href="https://www.neurokids.kz/platform/neurohub">NeuroHub</a></li>
+          <li><a href="https://www.neurokids.kz/events">События и олимпиады</a></li>
+          <li><a href="https://www.neurokids.kz/neurocreator">NeuroCreator</a></li>
+          <li><a href="https://www.neurokids.kz/news">Новости</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+77066666199">+7 706 666 6199</a></li>
+          <li>г. Алматы, ул. Алишера Навои, 280</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 NeuroKids. Все права защищены. ТОО «НЕЙРОКИДС», БИН 260540017173</span>
+      <nav aria-label="Документы">
+        <a href="#" title="TODO: ссылка на договор оферты">Договор оферты</a>
+        <a href="https://www.neurokids.kz/privacy">Политика конфиденциальности</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="characters.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
